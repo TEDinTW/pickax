@@ -1,0 +1,97 @@
+{
+  "version":"1.0",
+  "number": 5,
+  "file":[
+    {
+          "movieID": "0",
+          "movieURL": "null",
+          "movieImgURL": "0.png",
+          "desr": "V1美麗優",
+          "pdf": {
+          "ID":"1234",
+          "pdfNum":3,
+          "pdfURL":[
+                    "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_1.jpg",
+                    "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_2.jpg",
+                    "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_3.jpg"
+                    ]
+          }
+    },
+    {
+        "movieID": "001",
+        "movieURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/video01.mov",
+        "movieImgURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/sc01.png",
+        "desr": "V1美麗優",
+        "pdf": {
+            "ID":"1234",
+            "pdfNum":3,
+            "pdfURL":[
+                "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_1.jpg",
+                "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_2.jpg",
+                "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_3.jpg"
+            ]
+        }
+    },
+    {
+        "movieID": "002",
+        "movieURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/video01.mov",
+        "movieImgURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/sc02.png",
+        "desr": "V2美麗優",
+        "pdf": {
+            "ID":"1234",
+            "pdfNum":3,
+            "pdfURL":[
+                "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_1.jpg",
+                "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_2.jpg",
+                "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_3.jpg"
+            ]
+        }
+    },
+    {
+        "movieID": "003",
+        "movieURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/video01.mov",
+        "movieImgURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/sc03.png",
+        "desr": "V3美麗優",
+        "pdf": {
+            "ID":"1234",
+            "pdfNum":3,
+            "pdfURL":[
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_1.jpg",
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_2.jpg",
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_3.jpg"
+            ]
+        }
+    },
+    {
+        "movieID": "004",
+        "movieURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/video01.mov",
+        "movieImgURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/sc04.png",
+        "desr": "V4美麗優",
+        "pdf": {
+            "ID":"1234",
+            "pdfNum":3,
+            "pdfURL":[
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_1.jpg",
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_2.jpg",
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_3.jpg"
+            ]
+        }
+    },
+    {
+        "movieID": "005",
+        "movieURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/video01.mov",
+        "movieImgURL": "http://www.ebeer.com.tw/ted/bowen/bookcase/sc05.png",
+        "desr": "V5美麗優",
+        "pdf": {
+            "ID":"1234",
+            "pdfNum":3,
+            "pdfURL":[
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_1.jpg",
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_2.jpg",
+                      "http://www.lwin.com.tw/uploads/ugm_img/image/main_pic_90_3.jpg"
+            ]
+        }
+    }
+  ],
+  "result":"100"
+}

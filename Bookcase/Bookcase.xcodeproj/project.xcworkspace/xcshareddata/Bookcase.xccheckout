@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>44AA7536-7CE0-46E3-9A1D-ED6BBA73D798</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bookcase</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6E7CF3D4-9FF1-4E87-8C88-D5ACE81E2E33</key>
+		<string>https://github.com/TEDinTW/pickax.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Bookcase/Bookcase.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6E7CF3D4-9FF1-4E87-8C88-D5ACE81E2E33</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TEDinTW/pickax.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6E7CF3D4-9FF1-4E87-8C88-D5ACE81E2E33</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6E7CF3D4-9FF1-4E87-8C88-D5ACE81E2E33</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pickax</string>
+		</dict>
+	</array>
+</dict>
+</plist>
