@@ -30,7 +30,7 @@
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.scrollsToTop = NO;
         _scrollView.userInteractionEnabled = YES;
-        _scrollView.backgroundColor = [UIColor whiteColor];
+        _scrollView.backgroundColor = [UIColor clearColor];//modified by TED
         _scrollView.delegate = self;
         [self addSubview:_scrollView];
         // Initialization code
@@ -63,6 +63,17 @@
         UIButton *currentClickButton = catagoryContentView.clickCatagoryButtons[currentClickButtonIdx];
         currentClickButton.hidden = NO;
         [currentClickButton setTitle:catagory forState:UIControlStateNormal];
+        
+        UILabel *currentClickLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 268, 50)];
+        [currentClickLabel setCenter:CGPointMake(currentClickButton.center.x, currentClickButton.center.y-10)];
+
+
+        [catagoryContentView addSubview:currentClickLabel];
+        currentClickLabel.text=currentClickButton.titleLabel.text;
+        currentClickLabel.font=[UIFont systemFontOfSize:29];
+        currentClickLabel.textColor=[UIColor whiteColor];
+        [currentClickLabel setTextAlignment:NSTextAlignmentCenter];
+        
     }];
 }
 
