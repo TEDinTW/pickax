@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1BC25518A2647B004CAF7B /* product_bottom_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1BC25418A2647B004CAF7B /* product_bottom_bg.png */; };
 		AC406240187B9D1C001B8DFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC40623F187B9D1C001B8DFC /* Foundation.framework */; };
 		AC406242187B9D1C001B8DFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC406241187B9D1C001B8DFC /* CoreGraphics.framework */; };
 		AC406244187B9D1C001B8DFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC406243187B9D1C001B8DFC /* UIKit.framework */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F1BC25418A2647B004CAF7B /* product_bottom_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product_bottom_bg.png; sourceTree = "<group>"; };
 		AC40623C187B9D1C001B8DFC /* Bookcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC40623F187B9D1C001B8DFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC406241187B9D1C001B8DFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +171,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1BC25318A2647B004CAF7B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9F1BC25418A2647B004CAF7B /* product_bottom_bg.png */,
+			);
+			name = images;
+			path = Class/BCCatagoryView/images;
+			sourceTree = "<group>";
+		};
 		AC406233187B9D1C001B8DFC = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +338,7 @@
 		ACB834DE188FD56B00BCCB54 /* BCCatagoryView */ = {
 			isa = PBXGroup;
 			children = (
+				9F1BC25318A2647B004CAF7B /* images */,
 				ACB834D9188FD53200BCCB54 /* BCCatagoryView.h */,
 				ACB834DA188FD53200BCCB54 /* BCCatagoryView.m */,
 				ACB834DC188FD55C00BCCB54 /* BCCatagoryView.xib */,
@@ -418,6 +430,7 @@
 				AC41057918A26270000A5574 /* bookcase_bg_02.png in Resources */,
 				AC41057B18A26270000A5574 /* bottom02_videoPlay.png in Resources */,
 				AC41058018A26270000A5574 /* study_link_icon.png in Resources */,
+				9F1BC25518A2647B004CAF7B /* product_bottom_bg.png in Resources */,
 				ACB834DD188FD55C00BCCB54 /* BCCatagoryView.xib in Resources */,
 				AC41057818A26270000A5574 /* bookcase_bg_01_top.png in Resources */,
 				AC406258187B9D1C001B8DFC /* Images.xcassets in Resources */,
