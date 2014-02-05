@@ -44,7 +44,7 @@
                     <rect key="frame" x="73" y="274" width="188" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="下載文件" backgroundImage="bottom03_pdf_study">
+                    <state key="normal" title="下載文件" backgroundImage="bottom01_download">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -73,7 +73,7 @@
                     <rect key="frame" x="303" y="274" width="188" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="下載文件" backgroundImage="bottom03_pdf_study">
+                    <state key="normal" title="下載文件" backgroundImage="bottom01_download">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -103,7 +103,7 @@
                     <rect key="frame" x="533" y="274" width="188" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="下載文件" backgroundImage="bottom03_pdf_study">
+                    <state key="normal" title="下載文件" backgroundImage="bottom01_download">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -132,7 +132,7 @@
                     <rect key="frame" x="763" y="274" width="188" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="下載文件" backgroundImage="bottom03_pdf_study">
+                    <state key="normal" title="下載文件" backgroundImage="bottom01_download">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -173,6 +173,5 @@
     <resources>
         <image name="bookcase_bg_02" width="1906" height="536"/>
         <image name="bottom01_download" width="188" height="46"/>
-        <image name="bottom03_pdf_study" width="188" height="46"/>
     </resources>
 </document>

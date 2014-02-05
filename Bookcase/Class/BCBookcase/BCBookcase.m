@@ -125,6 +125,7 @@
                 } completionHandler:^(BOOL success) {
                     if (success) {
                         [sender setTitle:@"播放影片" forState:UIControlStateNormal];
+                        [sender setBackgroundImage:[UIImage imageNamed:@"bottom02_videoPlay"] forState:UIControlStateNormal];
                     }
                     [downloadProgressView removeFromSuperview];
                 }];
@@ -141,6 +142,12 @@
         MPMoviePlayerViewController *moviePlayerVC = [[MPMoviePlayerViewController alloc]initWithContentURL:movieURL];
         [_superViewController presentMoviePlayerViewControllerAnimated:moviePlayerVC];
     }
+}
+
+- (void)playMovieAtURL:(NSURL *)movieURL
+{
+    MPMoviePlayerViewController *moviePlayerVC = [[MPMoviePlayerViewController alloc]initWithContentURL:movieURL];
+    [_superViewController presentMoviePlayerViewControllerAnimated:moviePlayerVC];
 }
 
 - (IBAction)downloadPdfButton:(UIButton *)sender {
@@ -169,6 +176,7 @@
             } completionHandler:^(BOOL success) {
                 if (success) {
                     [sender setTitle:@"閱讀文獻" forState:UIControlStateNormal];
+                    [sender setBackgroundImage:[UIImage imageNamed:@"bottom03_pdf_study"] forState:UIControlStateNormal];
                 }
                 double delayInSeconds = 0.5f;
                 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -269,6 +277,7 @@
             NSString *videoPath = [videoFolderPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",movieId]];
             if ([_fileManager videoExistsAtVidePath:videoPath]) {
                 [downloadVideoButton setTitle:@"播放影片" forState:UIControlStateNormal];
+                [downloadVideoButton setBackgroundImage:[UIImage imageNamed:@"bottom02_videoPlay"] forState:UIControlStateNormal];
             }else {
                 [downloadVideoButton setTitle:@"下載影片" forState:UIControlStateNormal];
             }
@@ -283,6 +292,7 @@
         NSNumber *numberOfPages = bookInfo[@"pdfNum"];
         if ([_fileManager pdfExistsAtFolderPath:pdfFolderPath numberOfPages:numberOfPages]) {
             [downloadPdfButton setTitle:@"閱讀文件" forState:UIControlStateNormal];
+            [downloadPdfButton setBackgroundImage:[UIImage imageNamed:@"bottom03_pdf_study"] forState:UIControlStateNormal];
         }else {
             [_fileManager createFolderWithString:bookId];
             [downloadPdfButton setTitle:@"下載文件" forState:UIControlStateNormal];
