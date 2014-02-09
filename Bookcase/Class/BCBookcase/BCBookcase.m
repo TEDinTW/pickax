@@ -16,16 +16,22 @@
 @interface BCBookcase()<UITableViewDataSource,UITableViewDelegate>
 
 @property (strong, nonatomic, readonly) UIViewController *superViewController;
+
 @property (strong, nonatomic) UITableView *bookcaseTableView;
 @property (strong, nonatomic) NSNumber *numberOfRowAtBookcase;
 @property (strong, nonatomic) NSNumber *numberOfColumnAtLastRow;
 @property (strong ,nonatomic) NSMutableArray *bookInfos;
+@property (strong, nonatomic) NSString *bookcaseTitle;
+@property (strong, nonatomic) NSNumber *bookcaseSerial;
+
 @property (strong, nonatomic) BCFileManager *fileManager;
 @property (strong, nonatomic) ReadingView *readingView;
 
 @property (strong, nonatomic) NSString *basicMoiveURL;
 @property (strong, nonatomic) NSString *basicPdfURL;
 @property (strong, nonatomic) NSString *basicMovieImgURL;
+
+@property (strong, nonatomic) NSMutableArray *studyLinkURLs;
 
 @end
 
@@ -38,6 +44,7 @@
     BOOL _respondsToHeightForRowAtIndex;
     BOOL _respondsToHeightForHeader;
     BOOL _respondsToHeightForFooter;
+    BOOL _respondsToTitleAndSerial;
 }
 
 - (id)initWithFrame:(CGRect)frame superViewController:(UIViewController *)superViewController response:(NSDictionary *)response {
@@ -46,8 +53,8 @@
         _superViewController = superViewController;
         _frame = frame;
         _heightOfRow = 350.0f;
-        _heightOfHeader = 35.0f;
-        _heightOfFooter = 35.0f;
+        _heightOfHeader = 60.0f;
+        _heightOfFooter = 60.0f;
         // Initialization code
         _bookcaseTableView = [[UITableView alloc]initWithFrame:self.bounds style:UITableViewStylePlain];
         _bookcaseTableView.delegate = self;
@@ -88,6 +95,12 @@
         _respondsToHeightForRowAtIndex = [bookcaseDelegate respondsToSelector:@selector(bookcase:heightForRowAtIndex:)];
         _respondsToHeightForHeader = [bookcaseDelegate respondsToSelector:@selector(heightForHeaderInBookcase:)];
         _respondsToHeightForFooter = [bookcaseDelegate respondsToSelector:@selector(heightForFooterInBookcase:)];
+        _respondsToTitleAndSerial = [bookcaseDelegate respondsToSelector:@selector(titleAndSerialOfBookcase:)];
+        if (_respondsToTitleAndSerial) {
+            NSArray *titleAndSerial = [bookcaseDelegate titleAndSerialOfBookcase:self];
+            _bookcaseTitle = titleAndSerial[0];
+            _bookcaseSerial = titleAndSerial[1];
+        }
     }
 }
 
@@ -144,12 +157,6 @@
     }
 }
 
-- (void)playMovieAtURL:(NSURL *)movieURL
-{
-    MPMoviePlayerViewController *moviePlayerVC = [[MPMoviePlayerViewController alloc]initWithContentURL:movieURL];
-    [_superViewController presentMoviePlayerViewControllerAnimated:moviePlayerVC];
-}
-
 - (IBAction)downloadPdfButton:(UIButton *)sender {
     NSInteger tag = sender.tag;
     if ([sender.titleLabel.text isEqualToString:@"下載文件"]) {
@@ -198,6 +205,33 @@
             _readingView.alpha = 1.0f;
         }];
     }
+}
+
+- (IBAction)editedButtonAction:(UIButton *)sender {
+    NSLog(@"edited");
+}
+
+- (IBAction)infoButtonAction:(UIButton *)sender {
+    NSLog(@"info");
+}
+
+#pragma mark - private
+- (void)playMovieAtURL:(NSURL *)movieURL
+{
+    if([_fileManager isReachable]){
+        MPMoviePlayerViewController *moviePlayerVC = [[MPMoviePlayerViewController alloc]initWithContentURL:movieURL];
+        [_superViewController presentMoviePlayerViewControllerAnimated:moviePlayerVC];
+    }else {
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"網路問題" message:@"此功能只能在有網路的情況下使用" delegate:nil cancelButtonTitle:@"確定" otherButtonTitles: nil];
+        [alertView show];
+    }
+    
+}
+
+- (void)tapBookcoverGestureRecongnizer:(UITapGestureRecognizer *)gestureRecongnizer {
+    int studyLinkURLsIndex = gestureRecongnizer.view.tag-1;
+    NSString *movieURL = _studyLinkURLs[studyLinkURLsIndex];
+    [self playMovieAtURL:[NSURL URLWithString:movieURL]];
 }
 
 #pragma mark - UITableView(bookcaseTableView) datasource
@@ -280,6 +314,28 @@
                 [downloadVideoButton setBackgroundImage:[UIImage imageNamed:@"bottom02_videoPlay"] forState:UIControlStateNormal];
             }else {
                 [downloadVideoButton setTitle:@"下載影片" forState:UIControlStateNormal];
+                if (bookcover.image) {
+                    CGRect bookcoverFrame = bookcover.frame;
+                    UIImage *image = [UIImage imageNamed:@"study_link_icon"];
+                    CGFloat height = CGRectGetHeight(bookcoverFrame);
+                    CGFloat width = height/image.size.height*image.size.width;
+                    CGFloat x = CGRectGetWidth(bookcoverFrame)-width;
+                    UIImageView *studyLinkLogo = [[UIImageView alloc]initWithFrame:CGRectMake(x, 0, width, height)];
+                    studyLinkLogo.contentMode = UIViewContentModeScaleToFill;
+                    studyLinkLogo.image = image;
+                    studyLinkLogo.userInteractionEnabled = NO;
+                    [bookcover addSubview:studyLinkLogo];
+                    
+                    UITapGestureRecognizer *tapGestureRecongnizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapBookcoverGestureRecongnizer:)];
+                    if (!_studyLinkURLs) {
+                        _studyLinkURLs = [[NSMutableArray alloc]init];
+                    }
+                    [_studyLinkURLs addObject:[_basicMoiveURL stringByAppendingPathComponent:bookInfo[@"movieURL"]]];
+                    bookcover.tag = [_studyLinkURLs count];
+                    tapGestureRecongnizer.numberOfTapsRequired = 1;
+                    [bookcover addGestureRecognizer:tapGestureRecongnizer];
+                    bookcover.userInteractionEnabled = YES;
+                }
             }
         }
         
@@ -303,9 +359,10 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _frame.size.width, _heightOfHeader)];
-    imageView.image = [UIImage imageNamed:@"bookcase_bg_01_top"];
-    return imageView;
+    UIView *headerView = [[[NSBundle mainBundle]loadNibNamed:@"BCHeaderView" owner:self options:0]lastObject];
+    UILabel *label = (UILabel *)[headerView viewWithTag:1];
+    label.text = _bookcaseTitle;
+    return headerView;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
