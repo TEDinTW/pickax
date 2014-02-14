@@ -42,9 +42,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="RIf-SE-rf3"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="push" identifier="goToBookcase" id="RlX-73-KEv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3b-WU-uEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +50,8 @@
         <!--Navigation Controller-->
         <scene sceneID="KI7-V8-bSG">
             <objects>
-                <navigationController definesPresentationContext="YES" id="tar-wZ-XyH" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="tar-wZ-XyH" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="42c-Om-bhv">
                         <autoresizingMask key="autoresizingMask"/>

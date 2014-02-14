@@ -51,7 +51,7 @@
                         <action selector="downloadPdfButton:" destination="-1" eventType="touchUpInside" id="Vkl-4T-tUI"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-yy-VbA">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-yy-VbA">
                     <rect key="frame" x="60" y="157" width="214" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -80,7 +80,7 @@
                         <action selector="downloadPdfButton:" destination="-1" eventType="touchUpInside" id="xpM-Ud-bow"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-aH-t4p">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5A-aH-t4p">
                     <rect key="frame" x="290" y="157" width="214" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -110,7 +110,7 @@
                         <action selector="downloadPdfButton:" destination="-1" eventType="touchUpInside" id="iyu-IN-Mlv"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" translatesAutoresizingMaskIntoConstraints="NO" id="dAG-UL-HHu">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAG-UL-HHu">
                     <rect key="frame" x="520" y="157" width="215" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -139,13 +139,17 @@
                         <action selector="downloadPdfButton:" destination="-1" eventType="touchUpInside" id="qqq-QI-zdy"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" translatesAutoresizingMaskIntoConstraints="NO" id="UDb-a6-5Kf">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="V1美麗優-30接近 利益分析 定存比較 匯率拒絕處理" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDb-a6-5Kf">
                     <rect key="frame" x="750" y="157" width="214" height="55"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMk-Yi-Uyc">
+                    <rect key="frame" x="60" y="21" width="215" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>

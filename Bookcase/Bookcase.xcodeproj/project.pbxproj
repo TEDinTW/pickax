@@ -43,12 +43,25 @@
 		AC406294187B9D92001B8DFC /* BCBookcase.m in Sources */ = {isa = PBXBuildFile; fileRef = AC406293187B9D92001B8DFC /* BCBookcase.m */; };
 		AC40629A187BAD1A001B8DFC /* BCBookcaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC406299187BAD1A001B8DFC /* BCBookcaseCell.xib */; };
 		AC40629D187BEC5C001B8DFC /* BCBookcaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC40629C187BEC5C001B8DFC /* BCBookcaseCell.m */; };
+		AC41057718A26270000A5574 /* bookcase_bg_01_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41056D18A26270000A5574 /* bookcase_bg_01_bottom.png */; };
+		AC41057818A26270000A5574 /* bookcase_bg_01_top.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41056E18A26270000A5574 /* bookcase_bg_01_top.png */; };
+		AC41057918A26270000A5574 /* bookcase_bg_02.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41056F18A26270000A5574 /* bookcase_bg_02.png */; };
+		AC41057A18A26270000A5574 /* bottom01_download.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41057018A26270000A5574 /* bottom01_download.png */; };
+		AC41057B18A26270000A5574 /* bottom02_videoPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41057118A26270000A5574 /* bottom02_videoPlay.png */; };
+		AC41057C18A26270000A5574 /* bottom03_pdf_study.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41057218A26270000A5574 /* bottom03_pdf_study.png */; };
+		AC41057D18A26270000A5574 /* edit_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41057318A26270000A5574 /* edit_bottom.png */; };
+		AC41057E18A26270000A5574 /* file_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41057418A26270000A5574 /* file_shadow.png */; };
+		AC41057F18A26270000A5574 /* info_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41057518A26270000A5574 /* info_bottom.png */; };
+		AC41058018A26270000A5574 /* study_link_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41057618A26270000A5574 /* study_link_icon.png */; };
 		AC4A271D188288E9003CB351 /* BCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4A271C188288E9003CB351 /* BCFileManager.m */; };
 		AC4A2720188288F2003CB351 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4A271F188288F2003CB351 /* DACircularProgressView.m */; };
 		AC4A272218828D5F003CB351 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4A272118828D5F003CB351 /* QuartzCore.framework */; };
 		AC57BBBF1884E8F000DB25FB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC57BBBE1884E8F000DB25FB /* MediaPlayer.framework */; };
 		AC57BBC11884F73F00DB25FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC57BBC01884F73F00DB25FB /* SystemConfiguration.framework */; };
 		AC57BBC31884F74800DB25FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC57BBC21884F74800DB25FB /* MobileCoreServices.framework */; };
+		AC6F396918A3C041000EEDF3 /* BCHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6F396818A3C041000EEDF3 /* BCHeaderView.xib */; };
+		AC6F397718A3D197000EEDF3 /* BCBookcaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6F397518A3D197000EEDF3 /* BCBookcaseViewController.m */; };
+		AC6F397818A3D197000EEDF3 /* BCBookcaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6F397618A3D197000EEDF3 /* BCBookcaseViewController.xib */; };
 		AC726D0F18839D2B00203FFD /* ReadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC726D0E18839D2B00203FFD /* ReadingView.m */; };
 		AC83AB82187D2EF7006345C7 /* file2.json in Resources */ = {isa = PBXBuildFile; fileRef = AC83AB81187D2EF7006345C7 /* file2.json */; };
 		ACB834DB188FD53200BCCB54 /* BCCatagoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB834DA188FD53200BCCB54 /* BCCatagoryView.m */; };
@@ -121,6 +134,16 @@
 		AC406299187BAD1A001B8DFC /* BCBookcaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCBookcaseCell.xib; path = Class/BCBookcase/BCBookcaseCell.xib; sourceTree = "<group>"; };
 		AC40629B187BEC5C001B8DFC /* BCBookcaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCBookcaseCell.h; path = Class/BCBookcase/BCBookcaseCell.h; sourceTree = "<group>"; };
 		AC40629C187BEC5C001B8DFC /* BCBookcaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCBookcaseCell.m; path = Class/BCBookcase/BCBookcaseCell.m; sourceTree = "<group>"; };
+		AC41056D18A26270000A5574 /* bookcase_bg_01_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookcase_bg_01_bottom.png; sourceTree = "<group>"; };
+		AC41056E18A26270000A5574 /* bookcase_bg_01_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookcase_bg_01_top.png; sourceTree = "<group>"; };
+		AC41056F18A26270000A5574 /* bookcase_bg_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookcase_bg_02.png; sourceTree = "<group>"; };
+		AC41057018A26270000A5574 /* bottom01_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom01_download.png; sourceTree = "<group>"; };
+		AC41057118A26270000A5574 /* bottom02_videoPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom02_videoPlay.png; sourceTree = "<group>"; };
+		AC41057218A26270000A5574 /* bottom03_pdf_study.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom03_pdf_study.png; sourceTree = "<group>"; };
+		AC41057318A26270000A5574 /* edit_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_bottom.png; sourceTree = "<group>"; };
+		AC41057418A26270000A5574 /* file_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file_shadow.png; sourceTree = "<group>"; };
+		AC41057518A26270000A5574 /* info_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_bottom.png; sourceTree = "<group>"; };
+		AC41057618A26270000A5574 /* study_link_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = study_link_icon.png; sourceTree = "<group>"; };
 		AC4A271B188288E9003CB351 /* BCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCFileManager.h; path = Class/BCBookcase/BCFileManager.h; sourceTree = "<group>"; };
 		AC4A271C188288E9003CB351 /* BCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCFileManager.m; path = Class/BCBookcase/BCFileManager.m; sourceTree = "<group>"; };
 		AC4A271E188288F2003CB351 /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DACircularProgressView.h; path = Class/BCBookcase/DACircularProgressView.h; sourceTree = "<group>"; };
@@ -129,6 +152,10 @@
 		AC57BBBE1884E8F000DB25FB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AC57BBC01884F73F00DB25FB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AC57BBC21884F74800DB25FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AC6F396818A3C041000EEDF3 /* BCHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCHeaderView.xib; path = Class/BCBookcase/BCHeaderView.xib; sourceTree = "<group>"; };
+		AC6F397418A3D197000EEDF3 /* BCBookcaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCBookcaseViewController.h; path = Class/BCBookcase/BCBookcaseViewController.h; sourceTree = "<group>"; };
+		AC6F397518A3D197000EEDF3 /* BCBookcaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCBookcaseViewController.m; path = Class/BCBookcase/BCBookcaseViewController.m; sourceTree = "<group>"; };
+		AC6F397618A3D197000EEDF3 /* BCBookcaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCBookcaseViewController.xib; path = Class/BCBookcase/BCBookcaseViewController.xib; sourceTree = "<group>"; };
 		AC726D0D18839D2B00203FFD /* ReadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadingView.h; path = Class/BCBookcase/ReadingView.h; sourceTree = "<group>"; };
 		AC726D0E18839D2B00203FFD /* ReadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReadingView.m; path = Class/BCBookcase/ReadingView.m; sourceTree = "<group>"; };
 		AC83AB81187D2EF7006345C7 /* file2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = file2.json; path = ../file2.json; sourceTree = "<group>"; };
@@ -308,8 +335,12 @@
 		AC406295187BAB10001B8DFC /* BCBookcase */ = {
 			isa = PBXGroup;
 			children = (
+				AC6F397418A3D197000EEDF3 /* BCBookcaseViewController.h */,
+				AC6F397518A3D197000EEDF3 /* BCBookcaseViewController.m */,
+				AC6F397618A3D197000EEDF3 /* BCBookcaseViewController.xib */,
 				AC406292187B9D92001B8DFC /* BCBookcase.h */,
 				AC406293187B9D92001B8DFC /* BCBookcase.m */,
+				AC6F396818A3C041000EEDF3 /* BCHeaderView.xib */,
 				AC40629B187BEC5C001B8DFC /* BCBookcaseCell.h */,
 				AC40629C187BEC5C001B8DFC /* BCBookcaseCell.m */,
 				AC406299187BAD1A001B8DFC /* BCBookcaseCell.xib */,
@@ -319,8 +350,27 @@
 				AC4A271F188288F2003CB351 /* DACircularProgressView.m */,
 				AC726D0D18839D2B00203FFD /* ReadingView.h */,
 				AC726D0E18839D2B00203FFD /* ReadingView.m */,
+				AC41056C18A26270000A5574 /* images */,
 			);
 			name = BCBookcase;
+			sourceTree = "<group>";
+		};
+		AC41056C18A26270000A5574 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AC41056D18A26270000A5574 /* bookcase_bg_01_bottom.png */,
+				AC41056E18A26270000A5574 /* bookcase_bg_01_top.png */,
+				AC41056F18A26270000A5574 /* bookcase_bg_02.png */,
+				AC41057018A26270000A5574 /* bottom01_download.png */,
+				AC41057118A26270000A5574 /* bottom02_videoPlay.png */,
+				AC41057218A26270000A5574 /* bottom03_pdf_study.png */,
+				AC41057318A26270000A5574 /* edit_bottom.png */,
+				AC41057418A26270000A5574 /* file_shadow.png */,
+				AC41057518A26270000A5574 /* info_bottom.png */,
+				AC41057618A26270000A5574 /* study_link_icon.png */,
+			);
+			name = images;
+			path = Class/BCBookcase/images;
 			sourceTree = "<group>";
 		};
 		ACB834DE188FD56B00BCCB54 /* BCCatagoryView */ = {
@@ -419,6 +469,7 @@
 				9F47FA6718A25FFE0028E2CF /* bottom02_videoPlay.png in Resources */,
 				9F47FA6C18A25FFE0028E2CF /* study_link_icon.png in Resources */,
 				ACB834DD188FD55C00BCCB54 /* BCCatagoryView.xib in Resources */,
+				AC41057818A26270000A5574 /* bookcase_bg_01_top.png in Resources */,
 				AC406258187B9D1C001B8DFC /* Images.xcassets in Resources */,
 				AC40624A187B9D1C001B8DFC /* InfoPlist.strings in Resources */,
 				AC406253187B9D1C001B8DFC /* Main.storyboard in Resources */,
@@ -465,6 +516,7 @@
 				AC406290187B9D51001B8DFC /* AFURLSessionManager.m in Sources */,
 				AC4A2720188288F2003CB351 /* DACircularProgressView.m in Sources */,
 				AC40624C187B9D1C001B8DFC /* main.m in Sources */,
+				AC6F397718A3D197000EEDF3 /* BCBookcaseViewController.m in Sources */,
 				AC406250187B9D1C001B8DFC /* BCAppDelegate.m in Sources */,
 				AC726D0F18839D2B00203FFD /* ReadingView.m in Sources */,
 			);

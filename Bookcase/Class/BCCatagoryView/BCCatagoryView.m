@@ -8,11 +8,15 @@
 
 #import "BCCatagoryView.h"
 #import "BCCatagoryContentView.h"
+#import "BCBookcaseViewController.h"
 
 @interface BCCatagoryView()<UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) UIViewController *superVuewController;
+
+@property (strong, nonatomic) NSMutableArray *pageViews;
+@property (strong, nonatomic) NSArray *catagories;
 
 @end
 
@@ -40,55 +44,68 @@
 
 - (void)setCatagories:(NSArray *)catagories {
     
-    CGFloat scrollViewWidth = _scrollView.frame.size.width;
-    CGFloat scrollViewHeight = _scrollView.frame.size.height;
-    
-    int numberOfCatagories = catagories.count;
-    int numberOfPages = numberOfCatagories/9;
-    if (numberOfCatagories%9!=0) {
-        numberOfPages++;
-    }
-    [_scrollView setContentSize:CGSizeMake(scrollViewWidth*numberOfPages, scrollViewHeight)];
-    
-    [catagories enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        int currentPage = idx/9;
-        int currentClickButtonIdx = idx%9;
-        NSString *catagory = obj;
-        BCCatagoryContentView *catagoryContentView = (BCCatagoryContentView *)[self viewWithTag:currentPage+1];
-        if (!catagoryContentView) {
-            catagoryContentView = [[BCCatagoryContentView alloc]initWithFrame:CGRectMake(scrollViewWidth*currentPage, 0, scrollViewWidth, scrollViewHeight) owner:self];
-            [_scrollView addSubview:catagoryContentView];
-            catagoryContentView.tag = currentPage+1;
+    if(_catagories!=catagories){
+        _catagories = catagories;
+        
+        CGFloat scrollViewWidth = _scrollView.frame.size.width;
+        CGFloat scrollViewHeight = _scrollView.frame.size.height;
+        
+        int numberOfCatagories = catagories.count;
+        int numberOfPages = numberOfCatagories/9;
+        if (numberOfCatagories%9!=0) {
+            numberOfPages++;
         }
-        UIButton *currentClickButton = catagoryContentView.clickCatagoryButtons[currentClickButtonIdx];
-        currentClickButton.hidden = NO;
-        [currentClickButton setTitle:catagory forState:UIControlStateNormal];
+        if (!_pageViews) {
+            _pageViews = [[NSMutableArray alloc]init];
+        }
         
-        UILabel *currentClickLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 268, 50)];
-        [currentClickLabel setCenter:CGPointMake(currentClickButton.center.x, currentClickButton.center.y-10)];
-
-
-        [catagoryContentView addSubview:currentClickLabel];
-        currentClickLabel.text=currentClickButton.titleLabel.text;
-        currentClickLabel.font=[UIFont systemFontOfSize:29];
-        currentClickLabel.textColor=[UIColor whiteColor];
-        [currentClickLabel setTextAlignment:NSTextAlignmentCenter];
+        [_scrollView setContentSize:CGSizeMake(scrollViewWidth*numberOfPages, scrollViewHeight)];
         
-    }];
+        [catagories enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            int currentPage = idx/9;
+            int currentClickButtonIdx = idx%9;
+            NSString *catagory = obj[@"title"];
+            BCCatagoryContentView *catagoryContentView;
+            if (currentPage == _pageViews.count) {
+                catagoryContentView = [[BCCatagoryContentView alloc]initWithFrame:CGRectMake(scrollViewWidth*currentPage, 0, scrollViewWidth, scrollViewHeight) owner:self];
+                [_scrollView addSubview:catagoryContentView];
+                [_pageViews addObject:catagoryContentView];
+            }else {
+                catagoryContentView = (BCCatagoryContentView *)_pageViews[currentPage];
+            }
+            UIButton *currentClickButton = catagoryContentView.clickCatagoryButtons[currentClickButtonIdx];
+            currentClickButton.hidden = NO;
+            [currentClickButton setTitle:catagory forState:UIControlStateNormal];
+            currentClickButton.tag = currentPage*9+currentClickButtonIdx;
+            
+            UILabel *currentClickLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 268, 50)];
+            [currentClickLabel setCenter:CGPointMake(currentClickButton.center.x, currentClickButton.center.y-10)];
+            
+            [catagoryContentView addSubview:currentClickLabel];
+            currentClickLabel.text=currentClickButton.titleLabel.text;
+            currentClickLabel.font=[UIFont systemFontOfSize:29];
+            currentClickLabel.textColor=[UIColor whiteColor];
+            [currentClickLabel setTextAlignment:NSTextAlignmentCenter];
+            
+        }];
+    }
 }
 
 - (IBAction)clickCatagoryButtonAction:(UIButton *)sender {
-    NSLog(@"%@",sender.titleLabel.text);
-    [_superVuewController performSegueWithIdentifier:@"goToBookcase" sender:sender.titleLabel.text];
+    NSLog(@"%d",sender.tag);
+    BCBookcaseViewController *bookcaseViewController = [[BCBookcaseViewController alloc]initWithNibName:@"BCBookcaseViewController" bundle:[NSBundle mainBundle]];
+    bookcaseViewController.bookcaseTitle = _catagories[sender.tag][@"title"];
+    bookcaseViewController.bookcaseSerial = _catagories[sender.tag][@"serial"];
+    [_superVuewController.navigationController pushViewController:bookcaseViewController animated:YES];
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end

@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *clickCatagoryName;
 
 - (id)initWithFrame:(CGRect)frame superViewController:(UIViewController *)superVuewController;
+
 - (void)setCatagories:(NSArray *)catagories;
 
 @end

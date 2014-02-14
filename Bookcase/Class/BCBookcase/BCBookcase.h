@@ -28,5 +28,6 @@
 - (CGFloat)bookcase:(BCBookcase *)bookcase heightForRowAtIndex:(NSInteger)index;
 - (CGFloat)heightForHeaderInBookcase:(BCBookcase *)bookcase;
 - (CGFloat)heightForFooterInBookcase:(BCBookcase *)bookcase;
+- (NSArray *)titleAndSerialOfBookcase:(BCBookcase *)bookcase;
 
 @end

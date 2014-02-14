@@ -32,9 +32,13 @@
 {
     [super viewDidLoad];
     _catagoryTitles = @"AA,BB,CC,DD,EE,FF,GG,HH,II,JJ,KK,LL,MM";
-    NSArray *catagories = [_catagoryTitles componentsSeparatedByString:@","];
+    NSArray *titles = [_catagoryTitles componentsSeparatedByString:@","];
     CGRect frame = CGRectMake(0, 0, 1024.0f, 768.0f);
     _catagoryView = [[BCCatagoryView alloc]initWithFrame:frame superViewController:self];
+    __block NSMutableArray *catagories = [[NSMutableArray alloc]init];
+    [titles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [catagories addObject:@{@"title": obj,@"serial":[NSNumber numberWithInt:idx]}];
+    }];
     [_catagoryView setCatagories:catagories];
     [self.view addSubview:_catagoryView];
 	// Do any additional setup after loading the view.
