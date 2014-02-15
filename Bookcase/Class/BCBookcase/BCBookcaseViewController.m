@@ -38,7 +38,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"http://www.lwin.com.tw/ted_temp/pdf_json.php" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:[NSString stringWithFormat:@"http://www.lwin.com.tw/ted_temp/pdf_json.php?catagory=%@",_bookcaseSerial] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         _response = responseObject;
         _bookInfos = _response[@"file"];
         _bookcase = [[BCBookcase alloc]initWithFrame:self.view.bounds superViewController:self response:_response];
