@@ -152,7 +152,7 @@
 		AC83AB81187D2EF7006345C7 /* file2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = file2.json; path = ../file2.json; sourceTree = "<group>"; };
 		ACB834D9188FD53200BCCB54 /* BCCatagoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCCatagoryView.h; path = Class/BCCatagoryView/BCCatagoryView.h; sourceTree = "<group>"; };
 		ACB834DA188FD53200BCCB54 /* BCCatagoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCCatagoryView.m; path = Class/BCCatagoryView/BCCatagoryView.m; sourceTree = "<group>"; };
-		ACB834DC188FD55C00BCCB54 /* BCCatagoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCatagoryView.xib; sourceTree = "<group>"; };
+		ACB834DC188FD55C00BCCB54 /* BCCatagoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCCatagoryView.xib; path = Class/BCCatagoryView/BCCatagoryView.xib; sourceTree = "<group>"; };
 		ACB834DF188FD65C00BCCB54 /* BCCatagoryContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCCatagoryContentView.h; path = Class/BCCatagoryView/BCCatagoryContentView.h; sourceTree = "<group>"; };
 		ACB834E0188FD65C00BCCB54 /* BCCatagoryContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCCatagoryContentView.m; path = Class/BCCatagoryView/BCCatagoryContentView.m; sourceTree = "<group>"; };
 		ACB834E2188FDBD700BCCB54 /* BCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRootViewController.h; sourceTree = "<group>"; };
