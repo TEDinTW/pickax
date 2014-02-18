@@ -37,8 +37,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationController.navigationBarHidden=NO;
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:[NSString stringWithFormat:@"http://www.lwin.com.tw/ted_temp/pdf_json.php?catagory=%@",_bookcaseSerial] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *postURLStr=[NSString stringWithFormat:@"http://www.lwin.com.tw/ted_temp/pdf_json.php?catagory=%@",_bookcaseSerial];
+    NSLog(@"BCBookcaseVC postURL = %@",postURLStr);
+    [manager POST:postURLStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         _response = responseObject;
         _bookInfos = _response[@"file"];
         _bookcase = [[BCBookcase alloc]initWithFrame:self.view.bounds superViewController:self response:_response];

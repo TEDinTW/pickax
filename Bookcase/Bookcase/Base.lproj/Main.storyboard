@@ -50,10 +50,11 @@
         <!--Navigation Controller-->
         <scene sceneID="KI7-V8-bSG">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="tar-wZ-XyH" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
+                <navigationController definesPresentationContext="YES" id="tar-wZ-XyH" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="42c-Om-bhv">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
