@@ -45,14 +45,25 @@
     [manager POST:postURLStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         _response = responseObject;
         _bookInfos = _response[@"file"];
-        _bookcase = [[BCBookcase alloc]initWithFrame:self.view.bounds superViewController:self response:_response];
-        _bookcase.bookcaseDelegate = self;
-        [self.view addSubview:_bookcase];
+        if (![_bookInfos isKindOfClass:[NSNull class]]) {
+            _bookcase = [[BCBookcase alloc]initWithFrame:self.view.bounds superViewController:self response:_response];
+            _bookcase.bookcaseDelegate = self;
+            [self.view addSubview:_bookcase];
+        }else {
+            UILabel *messageLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200.0f, 80.0f)];
+            messageLabel.textAlignment = NSTextAlignmentCenter;
+            messageLabel.adjustsFontSizeToFitWidth = YES;
+            messageLabel.font = [UIFont fontWithName:@"Asia" size:80.0f];
+            messageLabel.center = self.view.center;
+            messageLabel.text = @"目前暫無此項目";
+            [self.view addSubview:messageLabel];
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
-        _bookcase = [[BCBookcase alloc]initWithFrame:CGRectMake(0, 20.0f, 1024.0f, 708.0f) superViewController:self response:@{}];
-        _bookcase.bookcaseDelegate = self;
-        [self.view addSubview:_bookcase];
+        [self.navigationController popViewControllerAnimated:YES];
+//        _bookcase = [[BCBookcase alloc]initWithFrame:CGRectMake(0, 20.0f, 1024.0f, 708.0f) superViewController:self response:@{}];
+//        _bookcase.bookcaseDelegate = self;
+//        [self.view addSubview:_bookcase];
     }];
 }
 
