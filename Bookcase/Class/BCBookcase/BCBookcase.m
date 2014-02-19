@@ -212,6 +212,13 @@
 }
 
 - (IBAction)infoButtonAction:(UIButton *)sender {
+    NSString *infoStr=@"1、	按「連線學習」時，可直接影音學習，不佔儲存間iPAD儲存空間，需連線狀態下使用。\
+    \r2、「影音學習」：直接下載影音至iPAD中儲存，可離線學習。提醒：會佔iPAD空間。\
+    \r3、「教案下載」：直接下載教案至iPAD中儲存，可離線學習。提醒：會佔iPAD空間。\
+    \r4、「編輯」：可清除已下載影音學習及教案，清除iPAD教案空間。提醒:更新時，已清除之教案會再出現，可按「連線學習」不佔iPAD空間。";
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"系統資訊" message:infoStr delegate:self cancelButtonTitle:@"確認" otherButtonTitles: nil];
+    
+    [alert show];
     NSLog(@"info");
 }
 
